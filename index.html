@@ -19,24 +19,24 @@
         <button onclick="botenhet()">START</button>
 
         <div class="spillertittel">
-            <h2>Deg</h2>
+            <h2>Spiller</h2>
         </div>
 
-        <div class="Bottittel">
+        <div class="bottittel">
             <h2>Robot</h2>
         </div>
 
         <div class="spiller">
 
-            <div class="stein">
+            <div class="enhetvalg">
                 <h4 id="stein" onclick="velgenhet('stein')">STEIN</h4>
             </div>
 
-            <div class="saks">
+            <div class="enhetvalg">
                 <h4 id="saks" onclick="velgenhet('saks')">SAKS</h4>
             </div>
 
-            <div class="papir">
+            <div class="enhetvalg">
                 <h4 id="papir" onclick="velgenhet('papir')">PAPIR</h4>
             </div>
 
@@ -91,6 +91,10 @@
                 papirElm.style.display = "block"
                 console.log("Spilleren valgte papir.")
             }
+        }
+
+        function sjekkresultat(){
+            
         }
 
 
