@@ -10,32 +10,32 @@
 
 <body>
 
-    <h1>Velkommen til det klassiske stein saks papir! Dette er den 
-        digitale versjonen for deg som overtenker for mye 
+    <h1>Velkommen til det klassiske stein saks papir! Dette er den
+        digitale versjonen for deg som overtenker for mye
         over hva den andre personen kommer til å velge.</h1>
 
     <div class="spillboks">
 
-        <button>START</button>
+        <button onclick="botenhet()">START</button>
 
         <div class="spiller">
 
-            <div id="stein">
-                <h4>STEIN</h4>
+            <div class="stein">
+                <h4 id="stein" onclick="velgenhet('stein')">STEIN</h4>
             </div>
 
-            <div id="saks">
-                <h4>SAKS</h4>
+            <div class="saks">
+                <h4 id="saks" onclick="velgenhet('saks')">SAKS</h4>
             </div>
 
-            <div id="papir">
-                <h4>PAPIR</h4>
+            <div class="papir">
+                <h4 id="papir" onclick="velgenhet('papir')">PAPIR</h4>
             </div>
 
         </div>
 
         <div class="bot">
-            <h4>Tilfeldig enhet vil vises her</h4>
+            <h4 id="bot">Tilfeldig enhet vil vises her</h4>
         </div>
 
     </div>
@@ -45,14 +45,45 @@
 
     <script>
 
-    const tilfeldigenhet = Math.floor(Math.random() * 2)
-    
-    function sjekkenhet() {
-        if (tilfeldigenhet == 0){
+        const tilfeldigenhet = Math.floor(Math.random() * 3)
+        const botElm = document.getElementById("bot")
+        const steinElm = document.getElementById("stein")
+        const saksElm = document.getElementById("saks")
+        const papirElm = document.getElementById("papir")
 
+        function botenhet() {
+            if (tilfeldigenhet == 1) {
+                botElm.innerHTML = "STEIN"
+                console.log("Maskinen valgte stein")
+            }
+            else if (tilfeldigenhet == 2) {
+                botElm.innerHTML = "SAKS"
+                console.log("Maskinen valgte saks")
+            }
+            else {
+                botElm.innerHTML = "PAPIR"
+                console.log("Maskinen valgte papir")
+            }
         }
-    }
-
+        function velgenhet(valgt) {
+            // Hide all elements except the clicked one
+            if (valgt === 'stein') {
+                saksElm.style.display = "none";
+                papirElm.style.display = "none";
+                steinElm.style.display = "block";
+                console.log("Spilleren valgte stein.")
+            } else if (valgt === 'saks') {
+                steinElm.style.display = "none";
+                papirElm.style.display = "none";
+                saksElm.style.display = "block"
+                console.log("Spilleren valgte saks")
+            } else if (valgt === 'papir') {
+                steinElm.style.display = "none";
+                saksElm.style.display = "none";
+                papirElm.style.display = "block"
+                console.log("Spilleren valgte papir.")
+            }
+        }
 
 
     </script>
