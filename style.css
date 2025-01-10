@@ -17,7 +17,7 @@ body{
     height: 600px;
     border: 2px solid black;
     display: grid;
-    grid-template-rows: 10% 20% 40% 10% 20%;
+    grid-template-rows: 10% 15% 55% 20%;
     grid-template-columns: 40% 20% 40%;
 }
 
@@ -35,7 +35,17 @@ button{
 
 .spiller{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/4;
     grid-row: 3/4;
 }
