@@ -49,3 +49,11 @@ button{
     grid-column: 3/4;
     grid-row: 3/4;
 }
+
+.bottittel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
