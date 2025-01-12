@@ -21,16 +21,33 @@ body{
     grid-template-columns: 40% 20% 40%;
 }
 
+
 h1{
     margin: 50px;
     text-align: center;
 }
 
 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: red;
     position: relative;
     grid-column: 2/3;
     grid-row: 1/2;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(225, 15, 15);
+}
+
+.ktcontainer{
+    height: 100%;
+}
+
+#knapptittel{
+    margin: auto;
 }
 
 .spiller{
@@ -68,4 +85,8 @@ button{
 
 .enhetvalg{
     cursor: pointer;
+}
+
+h4:hover{
+    font-size: 30px;
 }
