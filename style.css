@@ -90,3 +90,9 @@ button:hover{
 h4:hover{
     font-size: 30px;
 }
+
+.resultatDisplay{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+}
