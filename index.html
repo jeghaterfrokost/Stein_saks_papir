@@ -46,6 +46,10 @@
 
         </div>
 
+        <div id="resultatDisplay">
+            <h3 id="resultat"></h3>
+        </div>
+
         <div class="bot">
             <h4 id="bot">Tilfeldig enhet vil vises her</h4>
         </div>
@@ -54,49 +58,45 @@
 
     <script>
 
-        const tilfeldigenhet = Math.floor(Math.random() * 3)
+        let botValg = "";
+        let spillerValg = "";
+        const ResultatElm = document.getElementById("resultat")
         const botElm = document.getElementById("bot")
+        const valg = ["stein", "saks", "papir"];
         const steinElm = document.getElementById("stein")
         const saksElm = document.getElementById("saks")
         const papirElm = document.getElementById("papir")
 
         function botenhet() {
-            if (tilfeldigenhet == 1) {
-                botElm.innerHTML = "STEIN"
-                console.log("Maskinen valgte stein")
-            }
-            else if (tilfeldigenhet == 2) {
-                botElm.innerHTML = "SAKS"
-                console.log("Maskinen valgte saks")
-            }
-            else {
-                botElm.innerHTML = "PAPIR"
-                console.log("Maskinen valgte papir")
-            }
+            const tilfeldigenhet = Math.floor(Math.random() * 3)
+            botValg = valg[tilfeldigenhet]
+            botElm.innerHTML = botValg.toUpperCase()
+            console.log ("Maskinen valgte", botValg)
+
         }
+
         function velgenhet(valgt) {
-            // Hide all elements except the clicked one
+            spillerValg = valgt;
+            console.log ("Spilleren valgte", spillerValg)
             if (valgt === 'stein') {
                 saksElm.style.display = "none";
                 papirElm.style.display = "none";
                 steinElm.style.display = "block";
-                console.log("Spilleren valgte stein.")
             } else if (valgt === 'saks') {
                 steinElm.style.display = "none";
                 papirElm.style.display = "none";
                 saksElm.style.display = "block"
-                console.log("Spilleren valgte saks")
             } else if (valgt === 'papir') {
                 steinElm.style.display = "none";
                 saksElm.style.display = "none";
                 papirElm.style.display = "block"
-                console.log("Spilleren valgte papir.")
             }
         }
 
-        function sjekkresultat(){
+        function sjekkresultat{
             
         }
+
 
 
     </script>
