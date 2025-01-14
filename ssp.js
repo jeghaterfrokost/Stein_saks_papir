@@ -38,6 +38,7 @@ let botValg = "";
         function sjekkresultat() {
             if (spillerValg === botValg) {
                 ResultatElm.innerHTML = "Det ble uavgjort! Begge valgte " + spillerValg
+                restartknapp.style.display = "flex"
             }
             else if (
                 (spillerValg === 'stein' && botValg === "saks") ||
@@ -55,3 +56,4 @@ let botValg = "";
  
         function restart() {
             location.reload()
+        }

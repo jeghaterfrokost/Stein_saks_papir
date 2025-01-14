@@ -89,8 +89,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 50px;
-        background-color: #ff6bb5;
-        border: 5px solid #ff6bb5 ;
+        background-color: #2bd016;
+        border: 5px solid #2bd016 ;
         font-family: "Montserrat";
         font-size: 20px;
         color: white
@@ -122,8 +122,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 50px;
-        background-color: #ff6bb5;
-        border: 5px solid #ff6bb5 ;
+        background-color: #2bd016;
+        border: 5px solid #2bd016 ;
         font-family: "Montserrat";
         font-size: 20px;
         color: white
@@ -132,7 +132,7 @@
     .enhetvalg:hover{
         box-shadow: 0px 0px 5px black;
         background-color: transparent;
-        color: #ff6bb5;
+        color: #2bd016;
     }
  
     .resultatDisplay {
