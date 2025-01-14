@@ -10,13 +10,14 @@
 
 <body>
 
+
     <h1>Velkommen til det klassiske stein saks papir! Dette er den
         digitale versjonen for deg som overtenker for mye
         over hva den andre personen kommer til å velge.</h1>
 
     <div class="spillboks">
 
-        <button onclick="botenhet()">
+        <button onclick="botenhet()" id="startbutton">
             <div class="ktcontainer">
                 <h4 id="knapptittel">START</h4>
             </div>
@@ -31,7 +32,6 @@
         </div>
 
         <div class="spiller">
-
             <div class="enhetvalg">
                 <h4 id="stein" onclick="velgenhet('stein')">STEIN</h4>
             </div>
@@ -53,6 +53,8 @@
         <div class="bot">
             <h4 id="bot">Tilfeldig enhet vil vises her</h4>
         </div>
+
+        <button onclick="restart()" id="restart">Spill Igjen</button>
 
     </div>
 

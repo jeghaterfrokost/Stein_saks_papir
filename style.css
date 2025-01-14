@@ -1,98 +1,147 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.spillboks{
-    width: 1000px;
-    height: 600px;
-    border: 2px solid black;
-    display: grid;
-    grid-template-rows: 10% 15% 55% 20%;
-    grid-template-columns: 40% 20% 40%;
-}
-
-
-h1{
-    margin: 50px;
-    text-align: center;
-}
-
-button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    position: relative;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: rgb(225, 15, 15);
-}
-
-.ktcontainer{
-    height: 100%;
-}
-
-#knapptittel{
-    margin: auto;
-}
-
-.spiller{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-
-.bot{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3/4;
-    grid-row: 3/4;
-}
-
-.bottittel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3/4;
-    grid-row: 2/3;
-}
-
-.spillertittel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-.enhetvalg{
-    cursor: pointer;
-}
-
-h4:hover{
-    font-size: 30px;
-}
-
-.resultatDisplay{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+    }
+ 
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+ 
+    .spillboks {
+        width: 1000px;
+        height: 60vh;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 0px 0px 1px black;
+        display: grid;
+        grid-template-rows: 15% 10% 55% 20%;
+        grid-template-columns: 40% 20% 40%;
+        align-items: center;
+        justify-items: center;
+    }
+ 
+ 
+    h1 {
+        text-align: center;
+        font-weight: 500;
+        font-size: 25px;
+        width: 70%;
+    }
+ 
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 200px;
+        border-radius: 50px;
+        background-color: #688ca5;
+        border: 5px solid #688ca5 ;
+        font-family: "Montserrat";
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+ 
+    button:hover{
+        box-shadow: 0px 0px 5px black;
+        background-color: transparent;
+        color: black;
+    }
+ 
+    #startbutton {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+ 
+    .spiller {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+ 
+    .bot{
+        grid-column: 3/4;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #bot {
+        cursor: pointer;
+        width: 120px;
+        height: 50px;
+        margin: 10px;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: #ff6bb5;
+        border: 5px solid #ff6bb5 ;
+        font-family: "Montserrat";
+        font-size: 20px;
+        color: white
+    }
+ 
+    .bottittel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+ 
+    .spillertittel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+ 
+    .enhetvalg {
+        cursor: pointer;
+        width: 120px;
+        height: 50px;
+        margin: 10px;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: #ff6bb5;
+        border: 5px solid #ff6bb5 ;
+        font-family: "Montserrat";
+        font-size: 20px;
+        color: white
+    }
+ 
+    .enhetvalg:hover{
+        box-shadow: 0px 0px 5px black;
+        background-color: transparent;
+        color: #ff6bb5;
+    }
+ 
+    .resultatDisplay {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        text-align: center;
+    }
+ 
+    #restart {
+        grid-row: 4/5;
+        grid-column: 2/3;
+        display: none;
