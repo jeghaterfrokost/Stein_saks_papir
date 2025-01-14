@@ -11,51 +11,54 @@
 <body>
 
 
-    <h1>Velkommen til det klassiske stein saks papir! Dette er den
+    <h1>Velkommen til det klassiske stein saks papir! <br> <br> Dette er den
         digitale versjonen for deg som overtenker for mye
-        over hva den andre personen kommer til å velge.</h1>
-
+        over hva den andre personen kommer til å velge</h1>
+ 
     <div class="spillboks">
-
+ 
         <button onclick="botenhet()" id="startbutton">
             <div class="ktcontainer">
-                <h4 id="knapptittel">START</h4>
+                <span class="knapptekst">Spill</span>
             </div>
         </button>
-
+ 
         <div class="spillertittel">
             <h2>Spiller</h2>
         </div>
-
+ 
         <div class="bottittel">
             <h2>Robot</h2>
         </div>
-
+ 
         <div class="spiller">
-            <div class="enhetvalg">
-                <h4 id="stein" onclick="velgenhet('stein')">STEIN</h4>
+            <div class="enhetvalg" id="stein" onclick="velgenhet('stein')"">
+                <h4 >STEIN</h4>
             </div>
-
-            <div class="enhetvalg">
-                <h4 id="saks" onclick="velgenhet('saks')">SAKS</h4>
+ 
+            <div class="enhetvalg"  id="saks"onclick="velgenhet('saks')">
+                <h4>SAKS</h4>
             </div>
-
-            <div class="enhetvalg">
-                <h4 id="papir" onclick="velgenhet('papir')">PAPIR</h4>
+ 
+            <div class="enhetvalg"id="papir" onclick="velgenhet('papir')">
+                <h4 >PAPIR</h4>
             </div>
-
+ 
         </div>
-
+ 
         <div class="resultatDisplay">
             <h3 id="resultat"></h3>
         </div>
-
+ 
         <div class="bot">
-            <h4 id="bot">Tilfeldig enhet vil vises her</h4>
+            Datamaskinens Valg:
+            <h4 id="bot"></h4>
         </div>
-
-        <button onclick="restart()" id="restart">Spill Igjen</button>
-
+ 
+        <button onclick="restart()" id="restart">
+            <span class="knapptekst">Spill igjen</span>
+        </button>
+ 
     </div>
 
     <script src="ssp.js"></script>
