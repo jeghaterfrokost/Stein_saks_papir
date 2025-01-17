@@ -1,4 +1,6 @@
 let botValg = "";
+        let spillerscore = 0
+        let robotscore = 0
         let spillerValg = "";
         const ResultatElm = document.getElementById("resultat")
         const botElm = document.getElementById("bot")
@@ -47,10 +49,13 @@ let botValg = "";
             ) {
                 ResultatElm.innerHTML = "Du vant!"
                 restartknapp.style.display = "flex"
+                spillerscore++
             }
             else {
                 ResultatElm.innerHTML = "Du tapte"
                 restartknapp.style.display = "flex"
+                robotscore++
+
             }
         }
  
